@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "2d17458c-5084-4b59-8b6a-f95991b953f2",
+		"name": "triproute",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar uma nova conexão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start",
+							"value": "ORL",
+							"description": "ponto de origem",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "GRU",
+							"description": "destino",
+							"type": "text"
+						},
+						{
+							"key": "cost",
+							"value": "22",
+							"description": "custo",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createroute/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createroute",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encontrar rota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/findroute/?start=GRU&end=ORL",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"findroute",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "GRU",
+							"description": "ponto de origem"
+						},
+						{
+							"key": "end",
+							"value": "ORL",
+							"description": "destino"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
